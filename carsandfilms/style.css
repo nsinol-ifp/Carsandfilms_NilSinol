@@ -1,0 +1,104 @@
+@charset "UTF-8";
+
+body {
+    background: lightpink;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(40deg, #FFFDD0, lightpink);
+}
+
+.header {
+    height: 589px;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 50px;
+}
+
+.carrussel {
+    height: 589px;
+    width: 960px;
+    margin: auto;
+    background-image: url(img/ani/back.png);
+    background-repeat: no-repeat;
+}
+
+img {
+    height: 200px;
+    width: 300px;
+}
+
+.main {
+    width: 960px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 30px;
+    gap: 10px;
+    margin: auto;
+}
+
+.imatge-cotxe {
+    height: 200px;
+    width: 300px;
+}
+
+.titol-cotxe {
+    margin-bottom: 10px;
+    padding-left: 10px;
+}
+
+.casella {
+    width: 300px;
+    height: 240px;
+    background-color: white;
+    overflow: hidden;
+    transition: 0.5s;
+    opacity: 50%;
+}
+
+.casella:hover {
+    animation: 0.3s rotacio linear;
+    opacity: 100%;
+}
+
+.peu {
+    height: 220px;
+}
+
+.logo-peu {
+    height: 220px;
+    width: 100%;
+    margin: auto;
+    background-image: url(img/logo_carsandfilms.png);
+    background-repeat: no-repeat;
+}
+
+.fons {
+    z-index: -200;
+}
+
+
+@keyframes rotacio {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* responsiu */
+
+@media (max-width: 600px) {
+    .main {
+        grid-template-columns: 1fr;
+        align-items: center;
+    }
+}
+
+
+
